@@ -1,0 +1,233 @@
+﻿@{
+    ViewData["Title"] = "Deliver Post";
+}
+@using what_u_gonna_eat.ViewModels;
+@model DeliverPostView
+<link rel="stylesheet" href="~/css/DeliverPost.css" asp-append-version="true"/>
+<link rel="stylesheet" href="~/css/EaterPost.css" asp-append-version="true" />
+
+<a id="button" class="iconify" data-icon="material-symbols:add-circle"></a>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h2>Deliver Post</h2>
+        <div class="line"></div>
+        <span class="close">&times;</span>
+        <div class="content">
+            <form method="POST" asp-controller="DeliverPost" asp-action="Create" id="create-form">
+            <select id="boxrest" asp-for="deliverPost.Restaurant" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option selected>Select Restaurant</option>
+                    <option class="thai"value="ร้านพี่ฝน กาแฟสด&น้ำปั่น">ร้านพี่ฝน กาแฟสด&น้ำปั่น</option>
+                    <option class="thai value=" ร้านเทคโนอินเตอร์">ร้านเทคโนอินเตอร์</option>
+                    <option class="thai value="ร้านป้าศรีส้มตำ">ร้านป้าศรีส้มตำ</option>
+                    <option class="thai value="ร้านไอหนวด">ร้านไอหนวด</option>
+                    <option class="thai value="ร้านมามา ก๋วยเตี๋ยวเรือ">ร้านมามา ก๋วยเตี๋ยวเรือ</option>
+                    <option class="thai value="ร้านณรงค์ข้าวมันไก่">ร้านณรงค์ข้าวมันไก่</option>
+                    <option class="thai value=" ร้านมิลเลี่ยน">ร้านมิลเลี่ยน</option>
+                    <option class="thai value=" ร้านอิดรีส(ฮาลาล)">ร้านอิดรีส(ฮาลาล)</option>
+                    <option class="thai value=" ร้านไอเย็น">ร้านไอเย็น</option>
+                    <option class="thai value="ร้านโอชานะ">ร้านโอชานะ</option>
+                    <option class="thai value="ร้านcurry shop">ร้านcurry shop</option>
+                    <option class="thai value="ร้านครัวใต้ (ฮาลาล)">ร้านครัวใต้ (ฮาลาล)</option>
+                </select>
+
+                <div class="form-group">
+                <label class="foodtext">Description : </label>
+                <textarea  class="textdox" placeholder="กรอกรายละเอียดร้านอาหาร หรือข้อมูลเพิ่มเติม" asp-for="deliverPost.Description" class="form-control" required=""></textarea>
+            </div>
+
+            <button type="submit" asp-area="" asp-controller="DeliverPost" asp-action="Create" class="submit">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+ 
+
+<div id="modal1">
+    <div id="addorderbox" style="border:1px solid black ;position:absolute;left:50%;top:45%">
+        <div class="header p-2 items-center">
+            <div class="grid grid-cols-10 h-full mx-2 py-2.5">
+                <div id="texthead" class="flex col-span-8 items-center justify-center">
+                    <p class="text-center realyellow text-xl md:text-lg lg:text-2xl">Your Order</p>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <form method="post" asp-action="addOrder" asp-controller="DeliverPost">
+            <div class="form-group">
+                <label id="textinadd">FoodName : </label>
+                <input id="enterfoodIT" placeholder="กรอกชื่ออาหารที่ต้องการ" name="foodName" class="form-control" required="" />
+            </div>
+            <div class="form-group">
+                <label id="textinadd">Description : </label>
+                <input id="enterdesIT" placeholder="กรอกรายละเอียดการรับอาหาร หรือข้อมูลเพิ่มเติม" name="description" class="form-control" required="" />
+            </div>
+            <div class="form-group">
+            
+                <input type="hidden" name="postId" id="postIdInput" value="" />
+            </div>
+            <button id="confirmAddOrderBtn" type="submit" asp-action="addOrder" asp-controller="DeliverPost" >Confirm</button>
+
+            <button id="cancleAddOrderBtn" type="button">Cancle</button>
+
+        </form>
+    </div>
+</div>
+
+@if (Model.deliverPosts != null)
+{
+    <div class="grid grid-cols-1 gap-16 m-3 pt-6 md:grid-cols-2 lg:grid-cols-3 lg:px-10">
+        @foreach (var post in Model.deliverPosts)
+        {
+            <div class="flex flex-col card-p">
+
+                <div class="header yellow-div p-2 items-center">
+                    <div class="grid grid-cols-10 h-full mx-2 py-2.5">
+                        <div class="flex col-span-2 items-center justify-center">
+                            <img class="w-16" style="border-radius: 50%;" src="https://cdn.discordapp.com/attachments/975683623804100679/1102509863671713894/image.png" alt="Rounded avatar">
+                        </div>
+                        <div class="flex col-span-8 items-center justify-center ">
+                            <div style="display:flex;flex-direction:column">
+                                <p class="text-center text-xl dark-blue md:text-lg lg:text-2xl">@post.Poster?.Username</p>
+                                <p class="text-center text-base md:text-sm lg:text-lg" style="color:#FA8100">#Deliver</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center h-full my-3 mx-4 divide-x-2 lg:mx-5">
+                    <div class="basis-3/5 h-full space-y-2.5 mr-4">
+                        <p class="yellow" style="color : #FA8100">Restaurant :</p>
+                        <div>
+                            <span class="px-3 py-0.5 text-xs border-2 border-black rounded-full md:text-sm thai">@post.Restaurant</span>
+                        </div>
+                        <p class="yellow" style="color : #FA8100">Description :</p>
+                        <textarea id="style-2" rows="4" class="resize-none disable-scroll thai text-ms md:text-sm block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border-black border-2 "
+                          disabled>@post.Description
+                        </textarea>
+                        <div class="bottom-0 left-0 text-sm  md:text-base"><p>@post.CreatedDate</p></div>
+                    </div>
+
+                    
+                    <div class="flex basis-2/5 justify-center items-center h-full" style="border-color: #fdbf46;display:flex;flex-direction:column">
+                        @{
+                            int displayOpenamount = 0;
+                            int openAmount = post.OpenAmount ?? default(int);
+                            switch(openAmount)
+                            {
+                                case 0 :
+                                    displayOpenamount = 5;
+                                    break;
+                                case 1:
+                                    displayOpenamount = 4;
+                                    break;
+                                case 2:
+                                    displayOpenamount = 3;
+                                    break;
+                                case 3:
+                                    displayOpenamount = 2;
+                                    break;
+                                case 4:
+                                    displayOpenamount = 1;
+                                    break;
+                                case 5:
+                                    displayOpenamount = 0;
+                                    break;
+
+
+                            }
+                        }
+
+
+                        <p class="yellow" style="color : #FA8100">Amount @displayOpenamount/5</p>
+                        @if (post.Status == true && post.PosterId != Model.account.Id)
+                        {
+                            <button class="btnenable" id="buttonwhenenable" onclick=setPostId(@post.Id)  type="submit" style="height:100px"><span class="iconify" data-icon="material-symbols:add-circle-rounded" style="color: #fdbf46;" data-width="100" data-height="100"></span></button>                       
+                                   
+                        }
+                        else
+                        {   
+                            <button id="buttonwhendisable" type="submit" style="height:100px;cursor:default"><span class="iconify" data-icon="material-symbols:add-circle-outline-rounded" style="color:lightgray" data-width="100" data-height="100"></span></button>
+                        }
+
+                        
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+
+        }
+       
+    </div>
+}
+<script>
+
+    const createForm = document.getElementById("create-form");
+    var postAiD;
+    createForm.addEventListener("submit", function (event) {
+        // Get the values of the form inputs
+        var restaurant = document.getElementById("deliverPost_Restaurant").value;
+        var description = document.getElementById("deliverPost_Description").value;
+
+        // Display the confirmation dialog with the form values
+        var confirmCreate = confirm("Are you sure you want to create this post?\nDetail:\n\tRestaurant: " + restaurant + "\n\tDescription: " + description);
+
+        // If the user clicked "Cancel", prevent the form submission
+        if (!confirmCreate) {
+            event.preventDefault();
+        }
+    });
+
+
+    const allbtnenable = document.querySelectorAll('.btnenable');
+    const cancleAddOrder = document.getElementById("cancleAddOrderBtn")
+    const box = document.getElementById('addorderbox');
+
+    allbtnenable.forEach((element) => {
+        element.addEventListener('click', () => {
+            document.getElementById("modal1").style.display = "block";
+        });
+    });
+
+    cancleAddOrder.addEventListener("click",function(event){
+        clearAddOrder();
+    })
+
+    function setPostId(postId)
+    {
+        postAiD = postId;
+        document.getElementById("postIdInput").value = postAiD
+    }
+
+    function clearAddOrder()
+    {
+        document.getElementById("modal1").style.display = "none";
+        document.getElementById("enterfoodIT").value = "";
+        document.getElementById("enterdesIT").value = "";
+        document.getElementById("postIdInput").value = "";
+    }
+
+    const btn = document.getElementById("button");
+    // Get the modal element
+    const modal = document.getElementById("modal");
+
+    //get close
+    const cls = document.getElementsByClassName("close")[0];
+    // when onclick
+    btn.onclick = function () {
+        modal.style.display = "block";
+    };
+
+    // when click x
+    cls.onclick = function () {
+        modal.style.display = "none";
+    };
+
+
+                src = "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+
+            </script>
+

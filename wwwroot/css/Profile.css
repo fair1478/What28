@@ -1,0 +1,193 @@
+﻿/** {
+    box-sizing: border-box;
+}*/
+
+body {
+    margin: 0;
+    /*    background: rgba(243, 237, 215, 0.8);
+    background-image: url(https://cdn.discordapp.com/attachments/951012805170061322/1098173906700996739/IMG_3989.PNG);
+    background-size: cover*/
+    /*    filter:opacity(30%); */
+    background-image: url(https://cdn.discordapp.com/attachments/975683623804100679/1102515928442347561/IMG_4178.PNG);
+}
+
+p {
+    display: inline;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2%;
+    place-items: center;
+    /*    align-items: center;
+      justify-content: center; */
+    margin: 2%;
+}
+
+@media (max-width: 900px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+        padding-bottom: 50px;
+    }
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    background-color: rgba(250, 159, 27, 0.78);
+    border-radius: 50px;
+    padding: 3%;
+    min-width: 280px;
+    width: 100%;
+    max-height: 425px;
+    white-space: nowrap;
+}
+
+
+.title-section {
+    width: 95%;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-radius: 80px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+    border: 6px solid rgb(252, 252, 252);
+    background-color: #FA7E00;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Paytone One';
+    font-style: normal;
+    font-size: 25px;
+    position: relative;
+    right: -5px;
+}
+
+/*.title-circle {
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    left: -10px;
+    top: -14px;
+    border: 6px solid rgb(252, 252, 252);
+    border-radius: 100%;
+    background-color: #fa9f1b;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}*/
+
+.info-edit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+    width: 80%;
+    border-radius: 10px;
+    height: 40px;
+    background-color: white;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+    .info-edit span {
+        margin-left: 15px;
+        overflow: hidden;
+    }
+
+.profile-container form {
+    align-self : flex-end;
+}
+
+.profile-container button {
+    color: #F53F00;
+    border: 1px solid #D9171F;
+    border-radius: 50px;
+    align-self: flex-end;
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    padding: 10px 20px;
+}
+
+    .profile-container button:hover {
+        transition: .3s;
+        cursor: pointer;
+        color: white;
+        background-color: #D9171F;
+    }
+
+.profile-container a:hover,
+.profile-container a:focus {
+    color: white;
+}
+
+.history {
+    min-width: 280px;
+    width: 90%;
+    height: 610px;
+    background: #002D44;
+    border-radius: 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 900px) {
+    .history {
+        width: 100%;
+    }
+}
+
+.yelloww {
+    color: #FDBF46;
+}
+
+.text-his {
+    font-family: 'Paytone One';
+    font-style: normal;
+    font-size: 35px;
+    color: #FDBF46;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.line {
+    border-bottom: 2px solid #FFFF;
+    margin: 0 30px;
+}
+
+.line1 {
+    border-bottom: 2px solid #FFFF;
+    text-align: center;
+    margin: 0 30px;
+    font-size: 30px;
+}
+
+.histext {
+    /* position: absolute; */
+    border-bottom: 2px solid #FFFFFF;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FFBF4B;
+    border-radius: 5px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #FBA01C; 

@@ -1,0 +1,85 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\what-u-gonna-eat.bundle.scp.css",
+      "PackagePath": "staticwebassets\\what-u-gonna-eat.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\css\\DeliverPost.css",
+      "PackagePath": "staticwebassets\\css\\DeliverPost.css"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\css\\EaterPost.css",
+      "PackagePath": "staticwebassets\\css\\EaterPost.css"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\css\\LoginStyle.css",
+      "PackagePath": "staticwebassets\\css\\LoginStyle.css"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\css\\Profile.css",
+      "PackagePath": "staticwebassets\\css\\Profile.css"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\css\\Register.css",
+      "PackagePath": "staticwebassets\\css\\Register.css"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\css\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\StyleSheet.css"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\css\\addEater.css",
+      "PackagePath": "staticwebassets\\css\\addEater.css"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\css\\edit.css",
+      "PackagePath": "staticwebassets\\css\\edit.css"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\css\\navbar2.css",
+      "PackagePath": "staticwebassets\\css\\navbar2.css"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\js\\addEater.js",
+      "PackagePath": "staticwebassets\\js\\addEater.js"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\js\\confirmDelete.js",
+      "PackagePath": "staticwebassets\\js\\confirmDelete.js"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\js\\navbar3.js",
+      "PackagePath": "staticwebassets\\js\\navbar3.js"
+    },
+    {
+      "Id": "E:\\What-u-gonna-8s\\what-u-gonna-8s\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.what-u-gonna-eat.props",
+      "PackagePath": "build\\what-u-gonna-eat.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.what-u-gonna-eat.props",
+      "PackagePath": "buildMultiTargeting\\what-u-gonna-eat.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.what-u-gonna-eat.props",
+      "PackagePath": "buildTransitive\\what-u-gonna-eat.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.what-u-gonna-eat.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
